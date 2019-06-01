@@ -18,17 +18,21 @@
         <img src="images/l-main.png" alt="">
         <form action="">
             <span>账号登录</span><br/>
-            <input type="text" class="name" value="邮箱/手机号/用户名"><br/>
-            <input type="password" class="psd" value="请输入密码"><br/>
+            <input type="text" class="name"  name="tel" value="" required digits=true maxlength="11" minlength="11"><br/>
+            <input type="password" class="pass" name="pass"  required id="pass"><br/>
             <input type="button" class="btn" value="登录"><span class="forget">忘记密码?</span><br/>
+            <span class="tip"></span>
         </form>
     </section>
     <section class="foot"></section>
 </body>
 <script src="../../public/js/jquery.2.2.4.js"></script>
+<script src="../../public/libs/jquery.validate.js"></script>
+<script src="../../public/libs/jquery.validate.messages_zh.js"></script>
 <script>
     $(function(){
         $(".foot").load("http://localhost/ztt/goods/public/html/public.html .pfoot");
     })
+    $("form").validate();
 </script>
 </html>

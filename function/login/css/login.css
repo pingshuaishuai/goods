@@ -22,18 +22,17 @@ body {
 
 #l-main {
   width: 980px;
-  height: 400px;
+  height: 500px;
   background: #fff; }
   #l-main img {
     float: left;
-    margin: 50px 0 0 100px; }
+    margin: 100px 0 0 50px; }
   #l-main form {
-    width: 310px;
     height: 300px;
     border: 1px solid #e5e5e5;
-    float: right;
-    margin: 50px 88px 10px 0;
-    padding: 25px 0 0 20px; }
+    float: left;
+    margin: 100px 0 0 30px;
+    padding: 25px 20px 0 20px; }
     #l-main form span {
       font: 16px/48px "";
       color: #666; }
@@ -45,7 +44,7 @@ body {
     #l-main form .name {
       background: url(../images/user.png) no-repeat 14px 14px;
       padding-left: 45px; }
-    #l-main form .psd {
+    #l-main form .pass {
       background: url(../images/pas.png) no-repeat 14px 14px;
       padding-left: 45px; }
     #l-main form .btn {
@@ -58,3 +57,7 @@ body {
       font: 12px/40px "";
       color: #666;
       margin-left: 40px; }
+    #l-main form label {
+      color: #ef3831;
+      font: 14px/38px "";
+      margin-left: 5px; }
