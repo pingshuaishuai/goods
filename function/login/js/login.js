@@ -1,9 +1,10 @@
 class Login{
     constructor(){
-        this.tel = document.querySelector(".tel");
+        this.tel = document.querySelector(".name");
         this.pass = document.querySelector(".pass");
         this.btn = document.querySelector(".btn");
         this.span = document.querySelector(".tip");
+        console.log(this.tel)
 
         this.init();
         this.getData();
@@ -35,7 +36,7 @@ class Login{
                 console.log(this.data);
 
                 setTimeout(()=>{
-                    location.href = "index.html";
+                    location.href = "http://localhost/ztt/goods/index.html";
                 },2000)
                 return;
             }

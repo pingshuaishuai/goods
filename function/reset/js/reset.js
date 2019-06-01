@@ -37,7 +37,6 @@ class Vcode{
             that.display();
         }
     }
-
     check(){
         var that = this;
         this.veri.onblur = function(){
@@ -48,7 +47,6 @@ class Vcode{
             }
         }
     }
-
     // 随机数
     random(max,min){
         return Math.round(Math.random()*(max-min)+min);
@@ -56,13 +54,14 @@ class Vcode{
 }
 new Vcode;
 
+
+
+
 class Register{
     constructor(){
-        // this.user = document.querySelector(".user");
         this.tel = document.querySelector(".tel");
         this.pass = document.querySelector(".pass");
-        this.repass = document.querySelector(".repass");
-        this.btn = document.querySelector(".submit");
+        this.btn = document.querySelector(".btn");
         this.span = document.querySelector(".tip");
 
         this.init();
@@ -110,12 +109,10 @@ class Register{
             this.span.innerHTML = "注册成功,2秒后跳转";
             localStorage.setItem("data",JSON.stringify(this.data));
             setTimeout(()=>{
-                location.href = "../login/login.html";
+                location.href = "http://localhost/ztt/goods/function/login/login.html";
             },2000)
             return;
-            // location.href = "login.html";
         }
     }
 }
-
 new Register;

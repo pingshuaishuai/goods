@@ -52,13 +52,17 @@ body {
       border-radius: 6px; }
     #l-main form .vcode {
       width: 126px; }
-    #l-main form .submit {
+    #l-main form .btn {
       width: 120px;
       height: 40px;
       font: 18px/40px "";
       color: #fff;
       background: #ef3831;
-      margin-left: 120px; }
+      margin-left: 120px;
+      text-align: center;
+      padding: 0;
+      margin-bottom: 20px;
+      outline: none; }
     #l-main form .yzh {
       width: 120px;
       height: 38px;
@@ -74,3 +78,7 @@ body {
       color: #ef3831;
       font: 14px/38px "";
       margin-left: 5px; }
+    #l-main form i {
+      font: 600 16px/40px "";
+      color: #ef3831;
+      margin-left: 30px; }
