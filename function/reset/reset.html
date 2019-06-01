@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../public/css/public.css">
+    <link rel="stylesheet" href="../../public/css/goods.css">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+    <section id="l-top" class="margin">
+        <a href="../../index.html" class="logo"><img src="images/l-logo.png" alt=""></a>
+        <span>已有账号？<a href="../login/login.html">立即登录</a></span>
+    </section>
+    <section id="l-main" class="margin">
+        <form action="">
+            <span>账号注册</span><br/>
+            <label>手机号：</label><input type="text" class="tel" value="邮箱/手机号/用户名"><br/>
+            <label>密码：</label><input type="password" class="psd"><br/>
+            <label>确认密码：</label><input type="password" class="repsd"><br/>
+            <label>验证码：</label><input type="text" class="vcode"><span class="yzh">验证码</span><br/>
+            <input type="button" class="btn" value="注册"><br/>
+        </form>
+        <img src="images/reset.jpg" alt="">
+    </section>
+    <div class="foot"></div>
+</body>
+<script src="../../public/js/jquery.2.2.4.js"></script>
+<script>
+$(function(){
+    $(".foot").load("http://localhost/ztt/goods/public/html/public.html .pfoot");
+})
+</script>
+</html>

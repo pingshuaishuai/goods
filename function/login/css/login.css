@@ -1,0 +1,60 @@
+body {
+  width: 100%;
+  background: #f5f5f5; }
+
+.margin {
+  width: 980px;
+  margin: 0 auto; }
+
+#l-top {
+  overflow: hidden;
+  margin-top: 11px; }
+  #l-top .logo {
+    float: left;
+    display: block; }
+  #l-top span {
+    float: right;
+    font: 12px/76px "";
+    color: #666; }
+    #l-top span a {
+      font: 12px/76px "";
+      color: #0078c6; }
+
+#l-main {
+  width: 980px;
+  height: 400px;
+  background: #fff; }
+  #l-main img {
+    float: left;
+    margin: 50px 0 0 100px; }
+  #l-main form {
+    width: 310px;
+    height: 300px;
+    border: 1px solid #e5e5e5;
+    float: right;
+    margin: 50px 88px 10px 0;
+    padding: 25px 0 0 20px; }
+    #l-main form span {
+      font: 16px/48px "";
+      color: #666; }
+    #l-main form input {
+      width: 238px;
+      height: 38px;
+      border: 1px solid #c4c4c4;
+      margin-bottom: 20px; }
+    #l-main form .name {
+      background: url(../images/user.png) no-repeat 14px 14px;
+      padding-left: 45px; }
+    #l-main form .psd {
+      background: url(../images/pas.png) no-repeat 14px 14px;
+      padding-left: 45px; }
+    #l-main form .btn {
+      width: 120px;
+      height: 40px;
+      font: 18px/40px "";
+      color: #fff;
+      background: #ef3831; }
+    #l-main form .forget {
+      font: 12px/40px "";
+      color: #666;
+      margin-left: 40px; }
