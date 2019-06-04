@@ -5,8 +5,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="../../public/css/public.css">
+    <link rel="stylesheet" href="../../public/css/goods.css">
+    <link rel="stylesheet" href="css/goodlist.css">
 </head>
 <body>
-    
+    <section id="top"></section>
+    <header class="margin">
+        <a href="" class="logo"><img src="../../images/logo.png" alt=""></a>
+        <div class="search">
+            <img src="../../images/search1.png" alt="">
+            <input type="text" class="txt" value="618超级红包">
+            <img src="../../images/search2.png" alt="" class="find">
+        </div>
+        <a href="" class="nine"><img src="../../images/h-r.png" alt=""></a>
+    </header>
+    <nav class="margin">
+        <ul class="shy">
+            <li class="cont"><a>首页</a></li>
+            <li><a>淘宝精选</a></li>
+            <li><a>9块9包邮</a></li>
+            <li><a>排行榜</a></li>
+            <li><a>品牌团</a></li>
+            <li><a>优品汇</a></li>
+            <li><a>精选预告</a></li>
+            <li><a>积分商城</a></li>
+            <li><a>签到享好礼</a></li>
+        </ul>
+    </nav>
+    <section id="now">
+        <div class="margin">
+            <div class="classification">
+                <div class="nowclass">
+                    <span>当前分类：女装</span>
+                </div>
+                <div class="other">
+                    <a href="#">中老年</a>
+                    <span>|</span>
+                    <a href="#">运动</a>
+                    <span>|</span>
+                    <a href="#">家纺</a>
+                    <span>|</span>
+                    <a href="#">美妆</a>
+                    <span>|</span>
+                    <a href="#">配饰</a>
+                    <span>|</span>
+                    <a href="#">数码</a>
+                    <span>|</span>
+                    <a href="#">家电</a>
+                    <span>|</span>
+                    <a href="#">内衣</a>
+                    <span>|</span>
+                    <a href="#">男装</a>
+                    <span>|</span>
+                    <a href="#">美食</a>
+                    <span>|</span>
+                    <a href="#">母婴</a>
+                    <span>|</span>
+                    <a href="#">儿童</a>
+                    <span>|</span>
+                    <a href="#">居家</a>
+                    <span>|</span>
+                    <a href="#">鞋包</a>
+                    <span>|</span>
+                </div>
+            </div>
+            <ul class="many">
+                <li class="te">全部(240285)</li>
+                <li>卫衣打底(12808)</li>
+                <li>中老年女装(24021)</li>
+                <li>风衣外套(6306)</li>
+                <li>套装(8221)</li>
+                <li>T恤(16027)</li>
+                <li>裤装(18567)</li>
+                <li>衬衫(7104)</li>
+                <li>裙装(33700)</li>
+                <li>美裙(33700)</li>
+                <li>羽绒棉服(6440)</li>
+                <li>毛呢外套(5670)</li>
+                <li>裤装(18567)</li>
+                <li>针织毛衣(7922)</li>
+                <li>卫衣打底(41232)</li>
+            </ul>
+            <div class="sort">
+                <ul class="sort-l">
+                    <li class="te">综合</li>
+                    <li>销量</li>
+                    <li>价格</li>
+                    <li>最新</li>
+                </ul>
+                <b>TOP 销量排行榜</b>
+            </div>
+        </div>
+    </section>
+    <section id="data">
+        <div class="margin every">
+            <!-- <div class="good">
+                <img src="https://z2.tuanimg.com/imagev2/cpc/400x400.4d8fe2e457f8e3e3e1fe707d154b0153.380x380.jpg" alt="">
+                <span>¥58</span>
+                <p>淘宝 | 反季真丝连衣裙夏2019新款大牌妈</p>
+            </div>
+            <div class="good">
+                <img src="https://z2.tuanimg.com/imagev2/cpc/400x400.4d8fe2e457f8e3e3e1fe707d154b0153.380x380.jpg" alt="">
+                <span>¥58</span>
+                <p>淘宝 | 反季真丝连衣裙夏2019新款大牌妈</p>
+            </div>
+            <div class="good">
+                <img src="https://z2.tuanimg.com/imagev2/cpc/400x400.4d8fe2e457f8e3e3e1fe707d154b0153.380x380.jpg" alt="">
+                <span>¥58</span>
+                <p>淘宝 | 反季真丝连衣裙夏2019新款大牌妈</p>
+            </div>
+            <div class="good">
+                <img src="https://z2.tuanimg.com/imagev2/cpc/400x400.4d8fe2e457f8e3e3e1fe707d154b0153.380x380.jpg" alt="">
+                <span>¥58</span>
+                <p>淘宝 | 反季真丝连衣裙夏2019新款大牌妈</p>
+            </div> -->
+        </div>
+    </section>
+    <footer></footer>
+    <section class="foot"></section>
 </body>
+<script src="../../public/js/jquery.2.2.4.js"></script>
+<script src="../../public/js/ajax.2.0.js"></script>
+<script src="../../public/js/cookie.js"></script>
+<script src="js/goodlist.js"></script>
+<script>
+    $(function(){
+        $("#top").load("http://localhost/ztt/goods/public/html/public.html .itop");
+        $(".foot").load("http://localhost/ztt/goods/public/html/public.html .pfoot");
+        $("footer").load("http://localhost/ztt/goods/public/html/public.html .about");
+    })
+</script>
 </html>

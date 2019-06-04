@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../public/css/public.css">
+    <link rel="stylesheet" href="../../public/css/goods.css">
+    <link rel="stylesheet" href="css/car.css">
+</head>
+<body>
+    <section id="top"></section>
+    <table  width="1000px" align="center">
+        <thead>
+            <th>选中</th>
+            <th>商品</th>
+            <th>单价</th>
+            <th>数量</th>
+            <th>金额</th>
+            <th>操作</th>
+        </thead>
+        <tbody>
+            <!-- <tr>
+                <td><input type="checkbox"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr> -->
+        </tbody>
+    </table>
+</body>
+<script src="../../public/js/jquery.2.2.4.js"></script>
+<script>
+    $(function(){
+        $("#top").load("http://localhost/ztt/goods/public/html/public.html .itop");
+        // $(".foot").load("http://localhost/ztt/goods/public/html/public.html .pfoot");
+        // $("footer").load("http://localhost/ztt/goods/public/html/public.html .about");
+    })
+</script>
+</html>

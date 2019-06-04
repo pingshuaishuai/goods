@@ -1,0 +1,112 @@
+body {
+  width: 100%; }
+
+.margin {
+  width: 1200px;
+  margin: 0 auto; }
+
+#infor {
+  width: 1040px;
+  height: 550px;
+  margin: 20px auto;
+  border: 2px solid #e8e8e8; }
+  #infor .images .s_box {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left: 200px;
+    top: 200px; }
+    #infor .images .s_box img {
+      width: 400px;
+      height: 400px; }
+    #infor .images .s_box span {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100px;
+      height: 100px;
+      background: rgba(200, 200, 200, 0.5);
+      display: none; }
+  #infor .images .b_box {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 200px;
+    left: 650px;
+    overflow: hidden;
+    display: none; }
+    #infor .images .b_box img {
+      position: absolute;
+      width: 800px;
+      height: 800px; }
+  #infor .xiang {
+    margin: 50px 145px 0 0;
+    float: right; }
+    #infor .xiang p {
+      width: 400px;
+      display: block;
+      font: 600 16px/2 "";
+      color: #3c3c3c;
+      margin-bottom: 30px; }
+    #infor .xiang span {
+      display: block;
+      font: 20px/56px "";
+      color: #ff4400;
+      background: #fff2e8;
+      padding-left: 20px;
+      margin-bottom: 30px; }
+    #infor .xiang .number {
+      width: 102px;
+      height: 26px;
+      border: 1px solid #ccc;
+      margin-bottom: 30px; }
+    #infor .xiang .buy {
+      width: 136px;
+      height: 40px;
+      font: 16px/38px "";
+      color: #e5511d;
+      background: #ffe4d0;
+      border: 1px solid #f0cab6;
+      margin-bottom: 30px; }
+    #infor .xiang .tocar {
+      width: 136px;
+      height: 40px;
+      font: 16px/38px "";
+      color: #fff;
+      background: #ff4400;
+      border: none;
+      margin-left: 15px; }
+
+#tab {
+  width: 1040px;
+  height: 300px;
+  border: solid 1px black;
+  margin: 30px auto; }
+  #tab ul {
+    height: 46px;
+    text-align: center;
+    display: flex;
+    background: #f6f6f6;
+    border-bottom: solid 1px black; }
+  #tab ul li {
+    border-left: solid 1px black;
+    border-right: solid 1px black;
+    color: #3c3c3c;
+    font: 14px/46px ""; }
+  #tab ul li.active {
+    background: #fff;
+    color: #ff4400; }
+  #tab .cont {
+    height: 259px; }
+  #tab .cont .msg {
+    height: 259px;
+    display: none; }
+  #tab .cont .msg:nth-child(1) {
+    background: #288;
+    display: block; }
+  #tab .cont .msg:nth-child(2) {
+    background: #828; }
+  #tab .cont .msg:nth-child(3) {
+    background: #882; }
+  #tab .cont .msg:nth-child(4) {
+    background: #822; }

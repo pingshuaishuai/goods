@@ -1,0 +1,77 @@
+body {
+  width: 100%; }
+
+.margin {
+  width: 1200px;
+  margin: 0 auto; }
+
+#now {
+  background: #f5f5f5;
+  padding-bottom: 20px; }
+  #now .classification {
+    overflow: hidden;
+    font: 12px/38px "";
+    margin-top: 5px; }
+    #now .classification .nowclass {
+      float: left;
+      color: #333; }
+    #now .classification .other {
+      float: right;
+      color: #999; }
+  #now .many {
+    background: #fff;
+    height: 66px;
+    display: flex;
+    flex-wrap: wrap; }
+    #now .many li {
+      margin: 0 16px;
+      font: 12px/33px "";
+      color: #666; }
+    #now .many .te {
+      color: #ec1611; }
+  #now .sort {
+    overflow: hidden;
+    font: 12px/32px "";
+    color: #666;
+    background: #fff;
+    margin-top: 20px; }
+    #now .sort .sort-l {
+      float: left; }
+      #now .sort .sort-l li {
+        float: left;
+        border-right: 1px solid #f2f2f2;
+        padding: 0 15px; }
+      #now .sort .sort-l .te {
+        color: #fff;
+        background: #ec1611; }
+    #now .sort b {
+      float: right;
+      margin-right: 15px;
+      color: #666; }
+
+#data {
+  background: #f5f5f5; }
+  #data .margin {
+    display: flex;
+    justify-content: space-between;
+    background: #f5f5f5;
+    flex-wrap: wrap; }
+    #data .margin .good {
+      margin-bottom: 28px;
+      background: #fff; }
+      #data .margin .good img {
+        width: 255px;
+        height: 255px; }
+      #data .margin .good span {
+        font: 700 18px/2 "";
+        color: #ec1611;
+        padding: 0 10px;
+        display: block; }
+      #data .margin .good p {
+        font: 12px/30px "";
+        color: #666;
+        padding: 0 10px;
+        width: 240px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
