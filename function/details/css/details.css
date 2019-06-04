@@ -79,7 +79,6 @@ body {
 
 #tab {
   width: 1040px;
-  height: 300px;
   border: solid 1px #e5e5e5;
   margin: 30px auto; }
   #tab ul {
@@ -99,12 +98,7 @@ body {
     background: #fff;
     color: #ff4400; }
   #tab .cont .msg {
-    height: 259px;
-    display: none; }
+    display: none;
+    padding-left: 50px; }
   #tab .cont .msg:nth-child(1) {
-    background: #288;
     display: block; }
-  #tab .cont .msg:nth-child(2) {
-    background: #828; }
-  #tab .cont .msg:nth-child(3) {
-    background: #882; }

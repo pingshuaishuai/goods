@@ -20,7 +20,9 @@ body {
     #hhead .bottom img {
       float: left; }
     #hhead .bottom span {
-      float: right; }
+      float: right;
+      font: 16px/2 "";
+      color: #000; }
 
 #table table {
   width: 980px; }

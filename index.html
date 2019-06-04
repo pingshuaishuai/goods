@@ -11,7 +11,26 @@
     
 </head>
 <body>
-    <section id="top">
+    <section id="top1">
+        <div class="margin itop">
+            <div class="topr">
+                <span>|</span>            
+                <a href="">我的订单</a>
+                <span>|</span>            
+                <a href="">我的消息</a>
+                <span>|</span>            
+                <a href="" class="gocar">购物车</a>
+                <span>|</span>            
+                <a href="">帮助中心</a>
+                <span>|</span>            
+                <a href="">卖家中心</a>
+            </div>
+            <p class="p2">欢迎<span>XXX</span>登录,<em id="exit">退出</em></p>
+            <p class="p1">
+                <a href="function/login/login.html">[登录]</a>
+                <a href="function/reset/reset.html">[注册]</a>
+            </p>
+        </div>
     </section>
     <header class="margin">
         <a href="" class="logo"><img src="images/logo.png" alt=""></a>
@@ -56,7 +75,7 @@
         </ul>
     </section>
     <section id="main" class="margin">
-        <div class="selected">
+        <div class="selected scro">
             <div class="se-top">
                 <img src="images/main-1.png" alt="">
                 <h3>今日在线品牌1450个</h3>
@@ -75,7 +94,7 @@
             </div>
             <div class="se-bottom"></div>
         </div>
-        <div class="spike">
+        <div class="spike scro">
             <div class="se-top">
                 <img src="images/main-2.png" alt="">
                 <h3>精选爆款，限时限量</h3>
@@ -92,14 +111,14 @@
             </div>
             <div class="se-bottom"></div>
         </div>
-        <div class="women">
+        <div class="women scro">
             <div class="se-top">
                 <img src="images/main-3.png" alt="">
                 <h3>精选女装，秒变女神</h3>
             </div>
             <div class="se-bottom"></div>
         </div>
-        <div class="men">
+        <div class="men scro">
             <div class="se-top">
                 <img src="images/main-3.png" alt="">
                 <h3>精选男装，秒变男神</h3>
@@ -109,6 +128,15 @@
     <footer>
     </footer>
     <div class="foot"></div>
+    <section id="aside">
+        <ul class="asi">
+            <li>品牌</li>
+            <li>秒杀</li>
+            <li>女装</li>
+            <li>男装</li>
+            <div>TOP</div>
+        </ul>
+    </section>
 </body>
 <script src="public/js/jquery.2.2.4.js"></script>
 <script src="public/js/jquery.banner.1.1.js"></script>
@@ -120,6 +148,17 @@
         // $("header").load("http://localhost/ztt/goods/public/html/public.html .ihead");
         $(".foot").load("http://localhost/ztt/goods/public/html/public.html .pfoot");
         $("footer").load("http://localhost/ztt/goods/public/html/public.html .about");
+    })
+
+    $(".asi").find("li").click(function(){
+        $("html").animate({
+            scrollTop:$(".scro").eq($(this).index()).offset().top
+        })
+    })
+    $(".asi").find("div").click(function(){
+        $("html").animate({
+            scrollTop:0
+        })
     })
 </script>
 </html>

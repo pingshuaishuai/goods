@@ -5,6 +5,42 @@ body {
   width: 1200px;
   margin: 0 auto; }
 
+#top1 {
+  height: 30px;
+  background: #fafafa; }
+
+#top1 .margin {
+  height: 30px; }
+
+#top1 .p1 {
+  display: none;
+  float: right;
+  font: 12px/30px "";
+  color: #ec1611; }
+
+#top1 .p2 {
+  display: block;
+  float: right;
+  font: 12px/30px "";
+  color: #ec1611; }
+
+#top1 .topr {
+  float: right; }
+
+#top1 .topr a {
+  font: 12px/30px "";
+  color: #999; }
+
+#top1 a.te {
+  color: #ec1611; }
+
+#top1 .topr span {
+  color: #999;
+  margin: 0 15px; }
+
+#top1 .topr a:hover {
+  color: #ec1611; }
+
 #banner {
   position: relative;
   border: 1px solid #e5e5e5; }
@@ -136,3 +172,29 @@ body {
     font: 12px/30px "";
     color: #666;
     padding: 0 10px; }
+
+.asi {
+  width: 60px;
+  height: 204px;
+  position: fixed;
+  right: 0;
+  bottom: 40px;
+  background: #000; }
+
+.asi li {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  border-top: 1px solid #b6b6b6; }
+
+.asi div {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  border-top: 1px solid #b6b6b6; }

@@ -4,7 +4,7 @@ class Car{
         this.url = "http://localhost/ztt/goods/public/data/goods.json";
 
         this.init();
-        // this.addEvent();
+        this.addEvent();
     }
     // 获取数据
     init(){
@@ -20,31 +20,26 @@ class Car{
     // 获取cookie数据
     getStorage(){
         this.goods = JSON.parse(localStorage.getItem("shangpin"));
-        console.log(this.goods)
         for(var z = 0;z < this.goods.length;z++){
             this.id = this.goods[z].id;
-            console.log(this.id)
         }
-        // this.display();
+        this.display();
     }
     // 渲染页面
     display(){
-        // for(var i = 0;i < this.res.length;i++){
-        //     if(this.res[i].title == "women"){
-        //         for(var j = 0;j < this.res[i].shop.length;j++){
-        //             if(this.goods[0].id == this.res[i].shop[j].goodsId){
         var str = "";
         for(var i = 0;i < this.res.length;i++){
             for(var j = 0;j < this.res[i].shop.length;j++){
                 for(var z = 0;z < this.goods.length;z++){
                     if(this.goods[z].id == this.res[i].shop[j].goodsId){
-                        str += `<tr>
+                        var sum = parseFloat(this.res[i].shop[j].price*this.goods[z].num);
+                        str += `<tr index="${this.res[i].shop[j].goodsId}">
                                     <td class="te" index = "${this.goods[z].id}"><input type="checkbox"></td>
-                                    <td><img src="${this.res[i].src}"></td>
-                                    <td>${this.res[i].name}</td>
-                                    <td>${this.res[i].price}</td>
+                                    <td><img src="${this.res[i].shop[j].src}"></td>
+                                    <td>${this.res[i].shop[j].name}</td>
+                                    <td>${this.res[i].shop[j].price}</td>
                                     <td><input type="number" class="number" value="${this.goods[z].num}" min="1"></td>
-                                    <td>"${this.res[i].price}*${this.goods[z].num}"</td>
+                                    <td>${sum}</td>
                                     <td><span class="del">删除</span></td>
                                 </tr>`
                     }
