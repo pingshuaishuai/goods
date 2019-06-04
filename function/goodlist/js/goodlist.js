@@ -31,7 +31,6 @@ class Good{
             }
             this.every.innerHTML = str;
         }
-        
     }
     addEvent(){
         var that = this;
@@ -49,16 +48,10 @@ class Good{
 
     setStorage(){
         this.good = localStorage.getItem("good");
-        if(this.good){
-            this.good = JSON.parse(this.good);
-            this.good.push({
-                id:this.id,
-            })
-        }else{
-            this.good = [{
-                id:this.id
-            }]
-        }
+        this.good = [{
+            id:this.id
+        }]
+        
         localStorage.setItem("good",JSON.stringify(this.good));
         window.location.href = "http://localhost/ztt/goods/function/details/details.html"
         // console.log(cookie)

@@ -11,28 +11,55 @@
 </head>
 <body>
     <section id="top"></section>
-    <table  width="1000px" align="center">
-        <thead>
-            <th>选中</th>
-            <th>商品</th>
-            <th>单价</th>
-            <th>数量</th>
-            <th>金额</th>
-            <th>操作</th>
-        </thead>
-        <tbody>
-            <!-- <tr>
-                <td><input type="checkbox"></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr> -->
-        </tbody>
-    </table>
+    <section id="hhead">
+        <div class="margin">
+            <div class="top">
+                <a href="../../index.html"><img src="images/logo.png" alt=""></a>
+                <img src="images/logo1.png" alt="">
+            </div>
+            <div class="bottom">
+                <img src="images/logo2.png" alt="">
+                <span>继续购物</span>
+            </div>
+        </div>
+    </section>
+    <section id="table">
+        <table align="center" >
+            <thead>
+                <th><input type="checkbox">选中</th>
+                <th>图片</th>
+                <th>商品</th>
+                <th>单价</th>
+                <th>数量</th>
+                <th>金额</th>
+                <th>操作</th>
+            </thead>
+            <tbody>
+                <!-- <tr>
+                    <td class="te"><input type="checkbox"></td>
+                    <td><img src="https://z3.tuanimg.com/imagev2/cpc/800x800.a2d834776edb16dc0bf795bbf9fd8a8d.380x380.jpg" alt=""></td>
+                    <td>夏季新款女装很仙的法国小众连衣裙仙女超仙甜美长</td>
+                    <td>123</td>
+                    <td><input type="number" class="number"></td>
+                    <td>123</td>
+                    <td><span>删除</span></td>
+                </tr>
+                <tr>
+                    <td class="te"><input type="checkbox"></td>
+                    <td><img src="https://z3.tuanimg.com/imagev2/cpc/800x800.a2d834776edb16dc0bf795bbf9fd8a8d.380x380.jpg" alt=""></td>
+                    <td>夏季新款女装很仙的法国小众连衣裙仙女超仙甜美长</td>
+                    <td>123</td>
+                    <td><input type="number" class="number"></td>
+                    <td>123</td>
+                    <td><span>删除</span></td>
+                </tr> -->
+            </tbody>
+        </table>
+    </section>
 </body>
 <script src="../../public/js/jquery.2.2.4.js"></script>
+<script src="../../public/js/ajax.2.0.js"></script>
+<script src="js/car.js"></script>
 <script>
     $(function(){
         $("#top").load("http://localhost/ztt/goods/public/html/public.html .itop");

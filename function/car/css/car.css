@@ -4,3 +4,41 @@ body {
 .margin {
   width: 1000px;
   margin: 0 auto; }
+
+#hhead {
+  border-bottom: 2px solid #ec1611; }
+  #hhead .top {
+    overflow: hidden;
+    margin: 30px 0 34px; }
+    #hhead .top a {
+      float: left; }
+    #hhead .top img {
+      float: right; }
+  #hhead .bottom {
+    margin-bottom: 12px;
+    overflow: hidden; }
+    #hhead .bottom img {
+      float: left; }
+    #hhead .bottom span {
+      float: right; }
+
+#table table {
+  width: 980px; }
+  #table table thead th {
+    font: 12px/44px "";
+    color: #333; }
+  #table table tbody tr {
+    width: 976px;
+    height: 112px;
+    border: 2px solid #f2f2f2;
+    background: #fafafa; }
+    #table table tbody tr td {
+      width: 162px;
+      text-align: center; }
+      #table table tbody tr td img {
+        width: 70px;
+        height: 70px; }
+      #table table tbody tr td .number {
+        width: 162px; }
+    #table table tbody tr .te {
+      width: 100px; }

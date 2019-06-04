@@ -1,3 +1,103 @@
+class Details{
+    constructor(){
+        this.images = document.querySelector("#infor .images");
+        this.xiang = document.querySelector("#infor .xiang");
+        this.url = "http://localhost/ztt/goods/public/data/goods.json";
+        this.init();
+        this.addEvent();
+    }
+    init(){
+        var that = this;
+        ajax({
+            url:this.url,
+            success:function(res){
+                that.res = JSON.parse(res);
+                that.getStorage();
+            }
+        })
+    }
+    getStorage(){
+        this.goods = JSON.parse(localStorage.getItem("good"));
+        // console.log(this.goods[0].id)   
+        this.display();
+    }
+    display(){
+        let str = "";
+        let str2 = "";
+        for(var i = 0;i < this.res.length;i++){
+            if(this.res[i].title == "women"){
+                for(var j = 0;j < this.res[i].shop.length;j++){
+                    if(this.goods[0].id == this.res[i].shop[j].goodsId){
+                        // console.log(this.res[i].shop[j].goodsId)
+                        str = `<div class="s_box">
+                                    <img src="${this.res[i].shop[j].src}" alt="">
+                                    <span></span>
+                                </div>
+                                <div class="b_box">
+                                    <img src="${this.res[i].shop[j].src}" alt="">
+                                </div>`;
+                        str2 = `<p>${this.res[i].shop[j].name}</p>
+                                <span>${this.res[i].shop[j].price}</span>
+                                <input type="number" value="1" class="number" min="1"><br>
+                                <input type="button" value="立即购买" class="buy">
+                                <input type="button" value="加入购物车" class="tocar">`
+                    }
+                }
+            }
+            this.images.innerHTML = str;
+            this.xiang.innerHTML = str2;
+        }
+    }
+
+    addEvent(){
+        var that = this;
+        this.xiang.addEventListener("click",function(eve){
+            var e = eve || window.event;
+            var target = e.target || e.srcElement;
+            if(target.className == "tocar"){
+                // console.log(target)
+                that.id = that.goods[0].id;
+                that.setData();
+            }
+        })
+    }
+    // 设置cookie
+    setData(){
+        // console.log(1)
+        this.goods = localStorage.getItem("shangpin");
+        if(this.goods){
+            this.goods = JSON.parse(this.goods);
+            var onoff = true;
+            for(var i = 0;i < this.goods.length;i++){
+                if(this.id == this.goods[i].id){
+                    console.log(this.id);
+                    this.goods[i].num++;
+                    onoff = false;
+                }
+            }
+            if(onoff){
+                this.goods.push({
+                    id:this.id,
+                    num:1
+                })
+            }
+        }else{
+            this.goods = [{
+                id:this.id,
+                num:1
+            }]
+        }
+        localStorage.setItem("shangpin",JSON.stringify(this.goods));
+        // console.log(cookie)
+    }
+}
+new Details;
+
+
+
+
+
+
 function Magnifier(){
     // 1.选元素
     this.sBox = document.querySelector(".s_box");
@@ -71,9 +171,6 @@ Magnifier.prototype.init = function(){
 }
 
 new Magnifier;
-
-
-
 
 function Tab(){
     // 1.选元素
