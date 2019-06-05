@@ -35,6 +35,23 @@
                 }
                 this.sel.innerHTML = str;
             }
+            var aimg = document.querySelectorAll(".se-bottom img");
+            var clientH = document.documentElement.clientHeight;
+            function lazyLog(arr){
+                var scrollT = document.documentElement.scrollTop;
+                for(var i=0;i<arr.length;i++){
+                    if(arr[i].src != "") continue;
+
+                    if(arr[i].offsetTop < clientH + scrollT){
+                        arr[i].src = arr[i].getAttribute("data-src");
+                        console.log(`第${i}张可以加载了`)
+                    }
+                }
+            }
+            lazyLog(aimg)
+            onscroll = function(){
+                lazyLog(aimg)
+            }
         }
         // 渲染打折页面商品列表
         disSpi(){
@@ -42,14 +59,32 @@
             for(var i = 0;i < this.res.length;i++){
                 if(this.res[i].title == "dazhe"){
                     for(var j = 0;j < this.res[i].shop.length;j++){
+                        // console.log(this.res[i].shop[j].src)
                         str2 +=`<div class="seckill">
                         <img src="${this.res[i].shop[j].src}">
-                        <span>100</span>
-                        <p>shgjklkjhgfdsfghj</p>
+                        <span>￥${this.res[i].shop[j].price}</span>
+                        <p>${this.res[i].shop[j].name}</p>
                     </div>`
                     }
                 }
                 this.spi.innerHTML = str2;
+            }
+            var aimg = document.querySelectorAll(".se-bottom img");
+            var clientH = document.documentElement.clientHeight;
+            function lazyLog(arr){
+                var scrollT = document.documentElement.scrollTop;
+                for(var i=0;i<arr.length;i++){
+                    if(arr[i].src != "") continue;
+
+                    if(arr[i].offsetTop < clientH + scrollT){
+                        arr[i].src = arr[i].getAttribute("data-src");
+                        console.log(`第${i}张可以加载了`)
+                    }
+                }
+            }
+            lazyLog(aimg)
+            onscroll = function(){
+                lazyLog(aimg)
             }
         }
         // 渲染女装
@@ -57,15 +92,32 @@
             let str2 = "";
             for(var i = 0;i < this.res.length;i++){
                 if(this.res[i].title == "women"){
-                    for(var j = 0;j < this.res[i].shop.length;j++){
+                    for(var j = 0;j < 8;j++){
                         str2 +=`<div class="seckill">
-                        <img src="${this.res[i].shop[j].src}">
-                        <span>100</span>
-                        <p>shgjklkjhgfdsfghj</p>
+                        <img src="${this.res[i].shop[j].datasrc}">
+                        <span>￥${this.res[i].shop[j].price}</span>
+                        <p>${this.res[i].shop[j].name}</p>
                     </div>`
                     }
                 }
                 this.wom.innerHTML = str2;
+            }
+            var aimg = document.querySelectorAll(".se-bottom img");
+            var clientH = document.documentElement.clientHeight;
+            function lazyLog(arr){
+                var scrollT = document.documentElement.scrollTop;
+                for(var i=0;i<arr.length;i++){
+                    if(arr[i].src != "") continue;
+
+                    if(arr[i].offsetTop < clientH + scrollT){
+                        arr[i].src = arr[i].getAttribute("data-src");
+                        console.log(`第${i}张可以加载了`)
+                    }
+                }
+            }
+            lazyLog(aimg)
+            onscroll = function(){
+                lazyLog(aimg)
             }
         }
         // 渲染男装
@@ -75,13 +127,30 @@
                 if(this.res[i].title == "men"){
                     for(var j = 0;j < this.res[i].shop.length;j++){
                         str2 +=`<div class="seckill">
-                        <img src="${this.res[i].shop[j].src}">
-                        <span>100</span>
-                        <p>shgjklkjhgfdsfghj</p>
+                        <img src="${this.res[i].shop[j].datasrc}">
+                        <span>￥${this.res[i].shop[j].price}</span>
+                        <p>${this.res[i].shop[j].name}</p>
                     </div>`
                     }
                 }
                 this.men.innerHTML = str2;
+            }
+            var aimg = document.querySelectorAll(".se-bottom img");
+            var clientH = document.documentElement.clientHeight;
+            function lazyLog(arr){
+                var scrollT = document.documentElement.scrollTop;
+                for(var i=0;i<arr.length;i++){
+                    if(arr[i].src != "") continue;
+
+                    if(arr[i].offsetTop < clientH + scrollT){
+                        arr[i].src = arr[i].getAttribute("data-src");
+                        console.log(`第${i}张可以加载了`)
+                    }
+                }
+            }
+            lazyLog(aimg)
+            onscroll = function(){
+                lazyLog(aimg)
             }
         }
     }
@@ -130,7 +199,6 @@
                 str += `<li index=${i}>${this.res[i].name}</li>`;
             }
             this.menu.innerHTML = str;
-            this.addEvent2();
 
         }
         // 二级菜单事件委托
@@ -142,12 +210,14 @@
                 if(target.nodeName == "LI"){
                     that.index = target.getAttribute("index");
                     that.menu2.style.display = "block";
-                    that.displayTwo();
-                    // this.addEvent3();
 
+
+                    target.onclick = function(){
+                        window.location.href = "http://localhost/ztt/goods/function/goodlist/goodlist.html"
+                    }
+                    that.displayTwo();
                 }
             })
-
 
             this.menu.onmouseleave = function(){
                 that.menu.style.display = "none";
@@ -162,6 +232,7 @@
             }
             let str = str3 + str2;
             this.menu2.innerHTML = str;
+            this.addEvent3();
         }
 
         // 三级菜单事件监听。移出时消失
@@ -204,15 +275,9 @@
                     this.p2.style.display = "block";
                     this.span.innerHTML = this.data[i].tel;
                     this.successUser = this.data[i].tel;
-                    // this.gocar.onclick = function(){
-                    //     window.location.href="../function/car/car.html";
-                    // }
                     return;
                 }
                 // this.data[i].onoff = 0;
-                // this.gocar.onclick = function(){
-                //     window.location.href="../function/login/login.html";
-                // }
 
             }
             this.p1.style.display = "block";
@@ -240,11 +305,9 @@
                     console.log(that.data[i].onoff)
                     if(that.data[i].onoff == 1){
                         that.gocar.href="http://localhost/ztt/goods/function/car/car.html"
-                        // location.href="http://www.baidu.com";
                         return;
                     }else{
                         that.gocar.href="http://localhost/ztt/goods/function/login/login.html"
-                        // location.href="http://www.baidu.com";
                         return;
                     }
                 }
@@ -252,6 +315,7 @@
         }
     }
 
-    new Index();
+    new Index;
+
 
 })(jQuery);

@@ -95,6 +95,9 @@ body {
   color: #333;
   text-align: center; }
 
+#banner .menu li:hover {
+  color: #ff404c; }
+
 #banner .menu2 {
   width: 380px;
   height: 350px;
@@ -119,7 +122,8 @@ body {
     overflow: hidden;
     border-bottom: 1px solid #ff404c; }
     #main .selected .se-top img, #main .spike .se-top img, #main .women .se-top img, #main .men .se-top img {
-      float: left; }
+      float: left;
+      background: #ccc; }
     #main .selected .se-top h3, #main .spike .se-top h3, #main .women .se-top h3, #main .men .se-top h3 {
       float: left;
       font: 12px/40px "";
@@ -144,7 +148,8 @@ body {
   margin-bottom: 18px; }
   #main .spike .se-bottom .seckill img, #main .women .se-bottom .seckill img, #main .men .se-bottom .seckill img {
     width: 185px;
-    height: 185px; }
+    height: 185px;
+    background: #ccc; }
   #main .spike .se-bottom .seckill span, #main .women .se-bottom .seckill span, #main .men .se-bottom .seckill span {
     font: 700 15px/2 "";
     color: #ec1611;
@@ -163,7 +168,8 @@ body {
   margin-bottom: 10px; }
   #main .women .se-bottom .seckill img, #main .men .se-bottom .seckill img {
     width: 283px;
-    height: 283px; }
+    height: 283px;
+    background: #ccc; }
   #main .women .se-bottom .seckill span, #main .men .se-bottom .seckill span {
     font: 700 15px/2 "";
     color: #ec1611;

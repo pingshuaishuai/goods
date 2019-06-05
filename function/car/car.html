@@ -23,7 +23,7 @@
             </div>
         </div>
     </section>
-    <section id="table">
+    <section id="table" class="margin">
         <table align="center" >
             <thead>
                 <th><input type="checkbox">选中</th>
@@ -37,7 +37,10 @@
             <tbody>
             </tbody>
         </table>
+        <p class="money">总计：<b>钱。。</b><span class="pay">结算</span></p>
     </section>
+    <footer></footer>
+    <section class="foot"></section>
 </body>
 <script src="../../public/js/jquery.2.2.4.js"></script>
 <script src="../../public/js/ajax.2.0.js"></script>
@@ -45,8 +48,8 @@
 <script>
     $(function(){
         $("#top").load("http://localhost/ztt/goods/public/html/public.html .itop");
-        // $(".foot").load("http://localhost/ztt/goods/public/html/public.html .pfoot");
-        // $("footer").load("http://localhost/ztt/goods/public/html/public.html .about");
+        $(".foot").load("http://localhost/ztt/goods/public/html/public.html .pfoot");
+        $("footer").load("http://localhost/ztt/goods/public/html/public.html .about");
     })
 </script>
 </html>

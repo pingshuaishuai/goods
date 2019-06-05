@@ -28,21 +28,36 @@ class Car{
     // 渲染页面
     display(){
         var str = "";
+        this.money = 0;
         for(var i = 0;i < this.res.length;i++){
             for(var j = 0;j < this.res[i].shop.length;j++){
                 for(var z = 0;z < this.goods.length;z++){
                     if(this.goods[z].id == this.res[i].shop[j].goodsId){
-                        var sum = parseFloat(this.res[i].shop[j].price*this.goods[z].num);
+                        this.sum = parseFloat(this.res[i].shop[j].price*this.goods[z].num);
+                        // this.money += parseInt(this.res[i].shop[j].price*this.goods[z].num);
+                        // this.money = 0;
+                        // for(var q = 0;z < this.goods.length;q++){
+                        //     // this.money += this.sum;
+                            // console.log(this.money)
+                        // }
+
+
                         str += `<tr index="${this.res[i].shop[j].goodsId}">
                                     <td class="te" index = "${this.goods[z].id}"><input type="checkbox"></td>
-                                    <td><img src="${this.res[i].shop[j].src}"></td>
+                                    <td><img src="${this.res[i].shop[j].datasrc}"></td>
                                     <td>${this.res[i].shop[j].name}</td>
-                                    <td>${this.res[i].shop[j].price}</td>
+                                    <td>￥${this.res[i].shop[j].price}</td>
                                     <td><input type="number" class="number" value="${this.goods[z].num}" min="1"></td>
-                                    <td>${sum}</td>
+                                    <td>￥${this.sum}</td>
                                     <td><span class="del">删除</span></td>
                                 </tr>`
+                                
+                                this.money += this.sum;
+                                // console.log(this.money)
+                                
                     }
+                    console.log(this.money)
+                            
                 }
             }
         }
@@ -67,6 +82,7 @@ class Car{
                 that.id = target.parentNode.parentNode.getAttribute("index");
                 that.num = target.value;
                 that.change();
+                // that.changeSum();
             }
         })
     }
@@ -90,5 +106,18 @@ class Car{
         }
         localStorage.setItem("shangpin",JSON.stringify(this.goods));
     }
+    // changeSum(){
+    //     for(var i = 0;i < this.res.length;i++){
+    //         for(var j = 0;j < this.res[i].shop.length;j++){
+    //             for(var z = 0;z < this.goods.length;z++){
+    //                 if(this.goods[z].id == this.id){
+    //                     this.goods[z].num = this.num;
+    //                     this.sum = parseFloat(this.res[i].shop[j].price*this.goods[z].num);
+    //                     break;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
 }
 new Car;

@@ -61,7 +61,8 @@ body {
       background: #fff; }
       #data .margin .good img {
         width: 255px;
-        height: 255px; }
+        height: 255px;
+        background: #ccc; }
       #data .margin .good span {
         font: 700 18px/2 "";
         color: #ec1611;

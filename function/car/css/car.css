@@ -24,23 +24,51 @@ body {
       font: 16px/2 "";
       color: #000; }
 
-#table table {
-  width: 980px; }
-  #table table thead th {
-    font: 12px/44px "";
-    color: #333; }
-  #table table tbody tr {
-    width: 976px;
-    height: 112px;
-    border: 2px solid #f2f2f2;
-    background: #fafafa; }
-    #table table tbody tr td {
-      width: 162px;
+#table {
+  margin-bottom: 150px; }
+  #table table {
+    width: 980px; }
+    #table table thead th {
+      font: 12px/44px "";
+      color: #333; }
+    #table table tbody tr {
+      width: 976px;
+      height: 112px;
+      border: 2px solid #f2f2f2;
+      background: #fafafa; }
+      #table table tbody tr td {
+        width: 162px;
+        text-align: center; }
+        #table table tbody tr td img {
+          width: 70px;
+          height: 70px; }
+        #table table tbody tr td .number {
+          width: 162px; }
+      #table table tbody tr td:nth-child(3) {
+        font: 14px/18px "";
+        width: 180px; }
+      #table table tbody tr td:nth-child(4) {
+        color: #ec1611;
+        font: 16px/2 ""; }
+      #table table tbody tr td:nth-child(6) {
+        color: #ec1611;
+        font: 16px/2 ""; }
+      #table table tbody tr .del {
+        width: 100px;
+        font: 16px/2 "";
+        height: 32px;
+        background: #999;
+        display: block; }
+      #table table tbody tr .te {
+        width: 100px; }
+  #table p {
+    margin: 50px 20px 0 0;
+    font: 18px/40px "";
+    text-align: right; }
+    #table p .pay {
+      width: 100px;
+      height: 40px;
+      background: #ec1611;
+      color: #fff;
+      display: inline-block;
       text-align: center; }
-      #table table tbody tr td img {
-        width: 70px;
-        height: 70px; }
-      #table table tbody tr td .number {
-        width: 162px; }
-    #table table tbody tr .te {
-      width: 100px; }

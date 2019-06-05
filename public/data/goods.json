@@ -3,32 +3,32 @@
     "shop":[{
             "src":"images/se-1.png",
             "name":"夏季新款韩版修身大码连衣裙女长款收腰无袖波西米亚长裙子沙滩裙",
-            "price":"￥29.9",
+            "price":"29",
             "goodsId":"1"
         },{
             "src":"images/se-2.png",
             "name":"花怜语汉元素改良汉服唐装套装古装少女中国风刺绣两件套学生超仙",
-            "price":"￥69",
+            "price":"69",
             "goodsId":"2"
         },{
             "src":"images/se-3.png",
             "name":"秋水伊人夏新品女装纯色网纱拼接圆领修身淑女连衣裙女6721702620",
-            "price":"￥70",
+            "price":"70",
             "goodsId":"3"
         },{
             "src":"images/se-3.png",
             "name":"2019新款纯色A字连衣裙翻领纯棉短袖中长款t恤运动网球POLO裙女夏",
-            "price":"￥59",
+            "price":"59",
             "goodsId":"4"
         },{
             "src":"images/se-1.png",
             "name":"2019流行裙子夏季新款女装很仙的法国小众连衣裙仙女超仙甜美长裙",
-            "price":"￥100",
+            "price":"100",
             "goodsId":"5"
         },{
             "src":"images/se-2.png",
             "name":"花怜语汉元素改良汉服唐装套装古装少女中国风刺绣两件套学生超仙",
-            "price":"￥69",
+            "price":"69",
             "goodsId":"6"
         }
     ]
@@ -37,39 +37,39 @@
     "shop":[{
             "src":"https://z2.tuanimg.com/imagev2/cpc/750x750.d19ffa164f94c66fddb79b0913b2cb46.380x380.jpg",
             "name":"夏季新款韩版修身大码连衣裙女长款收腰无袖波西米亚长裙子沙滩裙",
-            "price":"￥29.9",
+            "price":"29.9",
             "goodsId":"7"
         },{
             "src":"https://z3.tuanimg.com/imagev2/cpc/800x800.c81532dd74aac8e8f848c26228b17f3e.380x380.jpg",
             "name":"花怜语汉元素改良汉服唐装套装古装少女中国风刺绣两件套学生超仙",
-            "price":"￥69",
+            "price":"69",
             "goodsId":"8"
         },{
             "src":"https://z3.tuanimg.com/imagev2/cpc/800x800.a2d834776edb16dc0bf795bbf9fd8a8d.380x380.jpg",
             "name":"秋水伊人夏新品女装纯色网纱拼接圆领修身淑女连衣裙女6721702620",
-            "price":"￥70",
+            "price":"70",
             "goodsId":"9"
         },{
             "src":"https://z8.tuanimg.com/imagev2/cpc/800x800.75705677ee50ee3a91b547ee314cc901.380x380.jpg",
             "name":"2019新款纯色A字连衣裙翻领纯棉短袖中长款t恤运动网球POLO裙女夏",
-            "price":"￥59",
+            "price":"59",
             "goodsId":"10"
         },{
             "src":"https://z3.tuanimg.com/imagev2/cpc/800x800.1b9648df04c340e474ffd61161057d60.380x380.jpg",
             "name":"2019流行裙子夏季新款女装很仙的法国小众连衣裙仙女超仙甜美长裙",
-            "price":"￥100",
+            "price":"100",
             "goodsId":"11"
         },{
             "src":"https://z3.tuanimg.com/imagev2/cpc/800x800.c81532dd74aac8e8f848c26228b17f3e.380x380.jpg",
             "name":"花怜语汉元素改良汉服唐装套装古装少女中国风刺绣两件套学生超仙",
-            "price":"￥69",
+            "price":"69",
             "goodsId":"12"
         }
     ]
 },{
     "title":"women",
     "shop":[{
-            "src":"https://z2.tuanimg.com/imagev2/cpc/750x750.d19ffa164f94c66fddb79b0913b2cb46.380x380.jpg",
+            "datasrc":"https://z2.tuanimg.com/imagev2/cpc/750x750.d19ffa164f94c66fddb79b0913b2cb46.380x380.jpg",
             "name":"夏季新款韩版修身大码连衣裙女长款收腰无袖波西米亚长裙子沙滩裙",
             "price":"29.9",
             "goodsId":"13",
@@ -77,7 +77,7 @@
             "tab2":"../images/tab2.png",
             "tab3":"../images/tab3.png"
         },{
-            "src":"https://z3.tuanimg.com/imagev2/cpc/800x800.c81532dd74aac8e8f848c26228b17f3e.380x380.jpg",
+            "datasrc":"https://z3.tuanimg.com/imagev2/cpc/800x800.c81532dd74aac8e8f848c26228b17f3e.380x380.jpg",
             "name":"花怜语汉元素改良汉服唐装套装古装少女中国风刺绣两件套学生超仙",
             "price":"69",
             "goodsId":"14",
@@ -85,7 +85,7 @@
             "tab2":"../images/tab2.png",
             "tab3":"../images/tab3.png"
         },{
-            "src":"https://z3.tuanimg.com/imagev2/cpc/800x800.a2d834776edb16dc0bf795bbf9fd8a8d.380x380.jpg",
+            "datasrc":"https://z3.tuanimg.com/imagev2/cpc/800x800.a2d834776edb16dc0bf795bbf9fd8a8d.380x380.jpg",
             "name":"秋水伊人夏新品女装纯色网纱拼接圆领修身淑女连衣裙女6721702620",
             "price":"70",
             "goodsId":"15",
@@ -93,7 +93,7 @@
             "tab2":"../images/tab2.png",
             "tab3":"../images/tab3.png"
         },{
-            "src":"https://z8.tuanimg.com/imagev2/cpc/800x800.75705677ee50ee3a91b547ee314cc901.380x380.jpg",
+            "datasrc":"https://z8.tuanimg.com/imagev2/cpc/800x800.75705677ee50ee3a91b547ee314cc901.380x380.jpg",
             "name":"2019新款纯色A字连衣裙翻领纯棉短袖中长款t恤运动网球POLO裙女夏",
             "price":"59",
             "goodsId":"16",
@@ -101,7 +101,7 @@
             "tab2":"../images/tab2.png",
             "tab3":"../images/tab3.png"
         },{
-            "src":"https://z3.tuanimg.com/imagev2/cpc/800x800.1b9648df04c340e474ffd61161057d60.380x380.jpg",
+            "datasrc":"https://z3.tuanimg.com/imagev2/cpc/800x800.1b9648df04c340e474ffd61161057d60.380x380.jpg",
             "name":"2019流行裙子夏季新款女装很仙的法国小众连衣裙仙女超仙甜美长裙",
             "price":"100",
             "goodsId":"17",
@@ -109,26 +109,90 @@
             "tab2":"../images/tab2.png",
             "tab3":"../images/tab3.png"
         },{
-            "src":"https://z3.tuanimg.com/imagev2/cpc/800x800.c81532dd74aac8e8f848c26228b17f3e.380x380.jpg",
-            "name":"花怜语汉元素改良汉服唐装套装古装少女中国风刺绣两件套学生超仙",
-            "price":"69",
+            "datasrc":"https://gd1.alicdn.com/imgextra/i1/2978806126/O1CN01bUfMG61v7knIq6gWL_!!2978806126.jpg_400x400.jpg",
+            "name":"反季真丝连衣裙桑蚕丝大牌夏装清仓春装2019新款女民族风夏季裙子",
+            "price":"399",
             "goodsId":"18",
             "tab1":"../images/tab1.png",
             "tab2":"../images/tab2.png",
             "tab3":"../images/tab3.png"
         },{
-            "src":"https://z3.tuanimg.com/imagev2/cpc/800x800.1b9648df04c340e474ffd61161057d60.380x380.jpg",
-            "name":"2019流行裙子夏季新款女装很仙的法国小众连衣裙仙女超仙甜美长裙",
-            "price":"100",
+            "datasrc":"https://gd3.alicdn.com/imgextra/i3/692235218/O1CN01sdHWmc1oPtCPFdgry_!!692235218.jpg_400x400.jpg",
+            "name":"洋气真丝连衣裙2019新款欧洲站民族风重工刺绣桑蚕丝名媛A字裙子",
+            "price":"79",
             "goodsId":"19",
             "tab1":"http://localhost/ztt/goods/function/details/images/tab1.png",
             "tab2":"http://localhost/ztt/goods/function/details/images/tab2.png",
             "tab3":"http://localhost/ztt/goods/function/details/images/tab3.png"
         },{
-            "src":"https://z3.tuanimg.com/imagev2/cpc/800x800.c81532dd74aac8e8f848c26228b17f3e.380x380.jpg",
-            "name":"花怜语汉元素改良汉服唐装套装古装少女中国风刺绣两件套学生超仙",
-            "price":"69",
+            "datasrc":"https://gd1.alicdn.com/imgextra/i1/2311727419/O1CN01soHcWQ24fwudIvt6y_!!2311727419.jpg_400x400.jpg",
+            "name":"胖妹妹减龄连衣裙夏装特大码女装200斤蓬蓬裙洋气胖仙女裙网纱裙",
+            "price":"60",
             "goodsId":"20",
+            "tab1":"../images/tab1.png",
+            "tab2":"../images/tab2.png",
+            "tab3":"../images/tab3.png"
+        },{
+            "datasrc":"https://gd1.alicdn.com/imgextra/i2/0/O1CN01GBZjkC2JIKiw6rl1e_!!0-item_pic.jpg_400x400.jpg",
+            "name":"风衣女中长款2019春季新款学生过膝bf学院风waitmore网红薄款外套",
+            "price":"79",
+            "goodsId":"31",
+            "tab1":"../images/tab1.png",
+            "tab2":"../images/tab2.png",
+            "tab3":"../images/tab3.png"
+        },{
+            "datasrc":"https://gd2.alicdn.com/imgextra/i3/890273523/O1CN01qwS9a61btZrYo7sIb_!!890273523.jpg_400x400.jpg",
+            "name":"芙娜妮高腰包臀格子连衣裙两件套 2019夏装小清新花瓣袖t恤套装女",
+            "price":"179",
+            "goodsId":"32",
+            "tab1":"../images/tab1.png",
+            "tab2":"../images/tab2.png",
+            "tab3":"../images/tab3.png"
+        },{
+            "datasrc":"//gd3.alicdn.com/imgextra/i1/890273523/O1CN01CaNyTg1btZrXvlWQt_!!890273523.jpg_400x400.jpg",
+            "name":"芙娜妮2019春夏装雪纺连衣裙女中袖上衣收腰条纹短裙两件套套装裙",
+            "price":"179",
+            "goodsId":"33",
+            "tab1":"../images/tab1.png",
+            "tab2":"../images/tab2.png",
+            "tab3":"../images/tab3.png"
+        },{
+            "datasrc":"https://gd4.alicdn.com/imgextra/i2/2565345012/O1CN015SULzf1mtXbSb896D_!!2565345012.jpg_400x400.jpg",
+            "name":"2019新款夏法式宫廷复古少女中国风改良新式旗袍式连衣裙年轻款",
+            "price":"128",
+            "goodsId":"34",
+            "tab1":"../images/tab1.png",
+            "tab2":"../images/tab2.png",
+            "tab3":"../images/tab3.png"
+        },{
+            "datasrc":"https://gd3.alicdn.com/imgextra/i4/890273523/O1CN01kLAuIN1btZrmr2KFG_!!890273523.jpg_400x400.jpg",
+            "name":"芙娜妮2019夏季新款气质V领蕾丝连衣裙女高腰五分袖拼接网纱A字裙",
+            "price":"199",
+            "goodsId":"35",
+            "tab1":"../images/tab1.png",
+            "tab2":"../images/tab2.png",
+            "tab3":"../images/tab3.png"
+        },{
+            "datasrc":"https://gd3.alicdn.com/imgextra/i3/2221286352/O1CN01DChcvc1wnGKIhcvVf_!!2221286352.jpg_400x400.jpg",
+            "name":"新式旗袍连衣裙2019新款夏季小香风改良版少女日常短款显瘦中国风",
+            "price":"261",
+            "goodsId":"36",
+            "tab1":"../images/tab1.png",
+            "tab2":"../images/tab2.png",
+            "tab3":"../images/tab3.png"
+        },{
+            "datasrc":"https://gd3.alicdn.com/imgextra/i4/2652381499/TB2NiGzpv5TBuNjSspmXXaDRVXa_!!2652381499.jpg_400x400.jpg",
+            "name":"芙娜妮2019春夏新款气质淑女连衣裙两件套五分袖高腰时尚套装裙子",
+            "price":"179",
+            "goodsId":"37",
+            "tab1":"../images/tab1.png",
+            "tab2":"../images/tab2.png",
+            "tab3":"../images/tab3.png"
+        },{
+            "datasrc":"https://gd3.alicdn.com/imgextra/i3/2261600076/O1CN01MZmIZe1CQqbJvfWP4_!!2261600076.jpg_400x400.jpg",
+            "name":"一字肩小清新甜美吊带雪纺超仙白色连衣裙法国小众夏款很仙的裙子",
+            "price":"136",
+            "goodsId":"38",
             "tab1":"../images/tab1.png",
             "tab2":"../images/tab2.png",
             "tab3":"../images/tab3.png"
@@ -137,44 +201,44 @@
 },{
     "title":"men",
     "shop":[{
-            "src":"https://z2.tuanimg.com/imagev2/cpc/750x750.d19ffa164f94c66fddb79b0913b2cb46.380x380.jpg",
+            "datasrc":"https://z2.tuanimg.com/imagev2/cpc/750x750.d19ffa164f94c66fddb79b0913b2cb46.380x380.jpg",
             "name":"夏季新款韩版修身大码连衣裙女长款收腰无袖波西米亚长裙子沙滩裙",
-            "price":"￥29.9",
+            "price":"29.9",
             "goodsId":"21"
         },{
-            "src":"https://z3.tuanimg.com/imagev2/cpc/800x800.c81532dd74aac8e8f848c26228b17f3e.380x380.jpg",
+            "datasrc":"https://z3.tuanimg.com/imagev2/cpc/800x800.c81532dd74aac8e8f848c26228b17f3e.380x380.jpg",
             "name":"花怜语汉元素改良汉服唐装套装古装少女中国风刺绣两件套学生超仙",
-            "price":"￥69",
+            "price":"69",
             "goodsId":"22"
         },{
-            "src":"https://z3.tuanimg.com/imagev2/cpc/800x800.a2d834776edb16dc0bf795bbf9fd8a8d.380x380.jpg",
+            "datasrc":"https://z3.tuanimg.com/imagev2/cpc/800x800.a2d834776edb16dc0bf795bbf9fd8a8d.380x380.jpg",
             "name":"秋水伊人夏新品女装纯色网纱拼接圆领修身淑女连衣裙女6721702620",
-            "price":"￥70",
+            "price":"70",
             "goodsId":"23"
         },{
-            "src":"https://z8.tuanimg.com/imagev2/cpc/800x800.75705677ee50ee3a91b547ee314cc901.380x380.jpg",
+            "datasrc":"https://z8.tuanimg.com/imagev2/cpc/800x800.75705677ee50ee3a91b547ee314cc901.380x380.jpg",
             "name":"2019新款纯色A字连衣裙翻领纯棉短袖中长款t恤运动网球POLO裙女夏",
-            "price":"￥59",
+            "price":"59",
             "goodsId":"24"
         },{
-            "src":"https://z3.tuanimg.com/imagev2/cpc/800x800.1b9648df04c340e474ffd61161057d60.380x380.jpg",
+            "datasrc":"https://z3.tuanimg.com/imagev2/cpc/800x800.1b9648df04c340e474ffd61161057d60.380x380.jpg",
             "name":"2019流行裙子夏季新款女装很仙的法国小众连衣裙仙女超仙甜美长裙",
-            "price":"￥100",
+            "price":"100",
             "goodsId":"25"
         },{
-            "src":"https://z3.tuanimg.com/imagev2/cpc/800x800.c81532dd74aac8e8f848c26228b17f3e.380x380.jpg",
+            "datasrc":"https://z3.tuanimg.com/imagev2/cpc/800x800.c81532dd74aac8e8f848c26228b17f3e.380x380.jpg",
             "name":"花怜语汉元素改良汉服唐装套装古装少女中国风刺绣两件套学生超仙",
-            "price":"￥69",
+            "price":"69",
             "goodsId":"26"
         },{
-            "src":"https://z3.tuanimg.com/imagev2/cpc/800x800.1b9648df04c340e474ffd61161057d60.380x380.jpg",
+            "datasrc":"https://z3.tuanimg.com/imagev2/cpc/800x800.1b9648df04c340e474ffd61161057d60.380x380.jpg",
             "name":"2019流行裙子夏季新款女装很仙的法国小众连衣裙仙女超仙甜美长裙",
-            "price":"￥100",
+            "price":"100",
             "goodsId":"27"
         },{
-            "src":"https://z3.tuanimg.com/imagev2/cpc/800x800.c81532dd74aac8e8f848c26228b17f3e.380x380.jpg",
+            "datasrc":"https://z3.tuanimg.com/imagev2/cpc/800x800.c81532dd74aac8e8f848c26228b17f3e.380x380.jpg",
             "name":"花怜语汉元素改良汉服唐装套装古装少女中国风刺绣两件套学生超仙",
-            "price":"￥69",
+            "price":"69",
             "goodsId":"28"
         }
     ]
