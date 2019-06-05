@@ -116,6 +116,9 @@ body {
 #banner .menu2 li.te {
   width: 360px; }
 
+#banner .menu2 li:hover {
+  color: #ff404c; }
+
 #main .selected, #main .spike, #main .women, #main .men {
   margin-top: 34px; }
   #main .selected .se-top, #main .spike .se-top, #main .women .se-top, #main .men .se-top {

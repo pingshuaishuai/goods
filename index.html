@@ -142,13 +142,13 @@
 <script src="public/js/jquery.banner.1.1.js"></script>
 <script src="public/js/ajax.2.0.js"></script>
 <script src="js/index.js"></script>
+<script src="public/js/panduan.js"></script>
 <script>
     $(function(){
         $("#top").load("http://localhost/ztt/goods/public/html/public.html .itop");
         $(".foot").load("http://localhost/ztt/goods/public/html/public.html .pfoot");
         $("footer").load("http://localhost/ztt/goods/public/html/public.html .about");
     })
-
     $(".asi").find("li").click(function(){
         $("html").animate({
             scrollTop:$(".scro").eq($(this).index()).offset().top
