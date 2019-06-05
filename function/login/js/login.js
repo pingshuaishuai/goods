@@ -40,6 +40,7 @@ class Login{
                 },2000)
                 return;
             }
+            this.data[i].onoff = 0;
         }
         this.span.innerHTML = "用户名密码不符";
         location.href = "login.html";

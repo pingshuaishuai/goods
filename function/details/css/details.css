@@ -27,6 +27,8 @@ body {
       height: 100px;
       background: rgba(200, 200, 200, 0.5);
       display: none; }
+    #infor .images .s_box span.active {
+      display: block; }
   #infor .images .b_box {
     width: 400px;
     height: 400px;
@@ -34,7 +36,8 @@ body {
     top: 200px;
     left: 650px;
     overflow: hidden;
-    display: none; }
+    display: none;
+    z-index: 1; }
     #infor .images .b_box img {
       position: absolute;
       width: 800px;
@@ -76,6 +79,10 @@ body {
       background: #ff4400;
       border: none;
       margin-left: 15px; }
+    #infor .xiang a {
+      font: 16px/2 "";
+      color: #ff4400;
+      display: block; }
 
 #tab {
   width: 1040px;

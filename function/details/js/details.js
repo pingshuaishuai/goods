@@ -1,30 +1,36 @@
 class Details{
     constructor(){
         this.images = document.querySelector("#infor .images");
-        this.sbox = document.querySelector("#infor .s_box");
-        this.bbox = document.querySelector("#infor .b_box");
+        this.sBox = document.querySelector("#infor .s_box");
+        this.bBox = document.querySelector("#infor .b_box");
         this.cont = document.querySelector("#tab .cont");
         this.xiang = document.querySelector("#infor .xiang");
         this.url = "http://localhost/ztt/goods/public/data/goods.json";
         this.init();
         this.addEvent();
-        // this.event();
+        this.addEvent2();
     }
+
+    // 获取json中所有的数据
     init(){
         var that = this;
         ajax({
             url:this.url,
             success:function(res){
                 that.res = JSON.parse(res);
-                that.getStorage();
+                that.getStorage()
             }
         })
     }
+
+    // 获取good的localstroage的数据
     getStorage(){
         this.goods = JSON.parse(localStorage.getItem("good"));
         // console.log(this.goods[0].id)   
         this.display();
     }
+
+    // 渲染页面
     display(){
         let str = "";
         let str2 = "";
@@ -33,24 +39,91 @@ class Details{
             if(this.res[i].title == "women"){
                 for(var j = 0;j < this.res[i].shop.length;j++){
                     if(this.goods[0].id == this.res[i].shop[j].goodsId){
-
-                        str = `<img src="${this.res[i].shop[j].datasrc}" alt="" class="move">`;
-                        str1 = `<img src="${this.res[i].shop[j].src}" alt="">`;
+                        // 正常图片
+                        str = `<img src="${this.res[i].shop[j].datasrc}" alt="" class="move">
+                                <span class="kong"><span>`;
+                        // 放大的图片
+                        str1 = `<img src="${this.res[i].shop[j].datasrc}" alt="">`;
+                        // 渲染数据
                         str2 = `<p>${this.res[i].shop[j].name}</p>
                                 <span>￥${this.res[i].shop[j].price}</span>
-                                
                                 <input type="button" value="立即购买" class="buy">
                                 <input type="button" value="加入购物车" class="tocar"><br>
-                                <a href="../car/car.html">去购物车结算>></a>`;
+                                <a href="../goodlist/goodlist.html">继续购物>></a>`;
+                        }
                     }
                 }
+                // 将数据插入页面
+                this.sBox.innerHTML = str;
+                this.bBox.innerHTML = str1;
+                this.xiang.innerHTML = str2; 
             }
 
-            this.sbox.innerHTML = str;
-            this.bbox.innerHTML = str1;
-            this.xiang.innerHTML = str2;
+        // 获取已经渲染的数据
+        this.span = document.querySelector(".kong");
+        this.bImg = this.bBox.children[0];
+        console.log(this.bImg.style)
+        this.init1();
+    }
+
+    // 放大镜的功能
+    init1(){
+        var that = this;
+        // 进入时进行放大镜
+        this.sBox.onmouseover = function(){
+            // 显示元素
+            // console.log(this.span)
+            that.span.className = "active";
+            that.bBox.style.display = "block";
+            console.log(that.bBox)
+            // 移动             this == that.sBox
+            this.onmousemove = function(eve){
+                var e = eve || window.event;
+                // e.pageX - this.offsetLeft === e.offsetX
+                // e.pageY - this.offsetTop === e.offsetY
+                that.move({
+                    x:e.pageX - this.offsetLeft,
+                    y:e.pageY - this.offsetTop
+                })
+            }
+        }
+
+        // 鼠标移出时，隐藏元素
+        this.sBox.onmouseout = function(){
+            that.span.className  = "";
+            that.bBox.style.display = "none";
         }
     }
+
+    // span标签跟随移动
+    move(pos){
+            var l = pos.x - this.span.offsetWidth/2;
+            var t = pos.y - this.span.offsetHeight/2
+            // 边界限定
+            if(l<0) l=0;
+            if(t<0) t=0;
+            (l>this.sBox.offsetWidth-this.span.offsetWidth) && 
+            (l=this.sBox.offsetWidth-this.span.offsetWidth);
+            
+            (t>this.sBox.offsetHeight-this.span.offsetHeight) && 
+            (t=this.sBox.offsetHeight-this.span.offsetHeight);
+
+            // span的移动
+            this.span.style.left = l + "px";
+            this.span.style.top = t + "px";
+
+            // 计算比例
+
+            var x=  l / (this.sBox.offsetWidth-this.span.offsetWidth)
+            var y = t / (this.sBox.offsetHeight-this.span.offsetHeight)
+            // console.log(x,y)
+            // console.log(this.bImg.offsetWidth)
+
+            // 根据比例移动大图
+            this.bImg.style.left = -x * (this.bImg.offsetWidth-this.bBox.offsetWidth) + "px";
+            this.bImg.style.top = -y * (this.bImg.offsetHeight-this.bBox.offsetHeight) + "px";
+    }
+    // 购物功能：点击购物车，数量增加
     addEvent(){
         var that = this;
         this.xiang.addEventListener("click",function(eve){
@@ -63,7 +136,8 @@ class Details{
             }
         })
     }
-    // 设置cookie
+
+    // 设置localStorage
     setData(){
         this.good = localStorage.getItem("shangpin");
         if(this.good){
@@ -89,10 +163,22 @@ class Details{
             }]
         }
         localStorage.setItem("shangpin",JSON.stringify(this.good));
-        // console.log(cookie)
     }
+
+    addEvent2(){
+        
+        this.xiang.addEventListener("click",function(eve){
+            var e = eve || window.event;
+            var target = e.target || e.srcElement;
+            if(target.className == "buy"){
+                window.location.href = "http://localhost/ztt/goods/function/car/car.html";
+            }
+        })
+    }
+
 }
 new Details;
+
 
     function Tab(){
     // 1.选元素
@@ -141,83 +227,3 @@ Tab.prototype.show = function(){
 // 执行
 new Tab();
 
-// function Magnifier(){
-//     // 1.选元素
-//     this.sBox = document.querySelector(".s_box");
-//     this.span = document.createElement("span");
-//     // this.span.className = "span";
-//     this.sBox.appendChild(this.span);
-//     console.log(this.sBox)
-//     console.log(this.span)
-
-
-
-//     // this.bBox = document.querySelector(".b_box");
-//     // this.bImg = this.bBox.children[0];
-
-//     // 2.绑定事件：进入，移动，离开
-//     // this.init()
-// }
-// Magnifier.prototype.show = function(){
-//     // 显示
-//     this.span.style.display = "block";
-//     this.bBox.style.display = "block";
-// }
-// Magnifier.prototype.hide = function(){
-//     // 隐藏
-//     this.span.style.display = "none";
-//     this.bBox.style.display = "none";
-// }
-// Magnifier.prototype.move = function(pos){
-//     // 移动
-//     var l = pos.x - this.span.offsetWidth/2;
-//     var t = pos.y - this.span.offsetHeight/2
-//     // 边界限定
-//     if(l<0) l=0;
-//     if(t<0) t=0;
-//     (l>this.sBox.offsetWidth-this.span.offsetWidth) && 
-//     (l=this.sBox.offsetWidth-this.span.offsetWidth);
-    
-//     (t>this.sBox.offsetHeight-this.span.offsetHeight) && 
-//     (t=this.sBox.offsetHeight-this.span.offsetHeight);
-
-//     // span的移动
-//     this.span.style.left = l + "px";
-//     this.span.style.top = t + "px";
-
-//     // 计算比例
-//     // 已知咱班有89人，其中男生23人，请问男生找了总人数的比例是多少？
-//     // 23/89
-//     var x=  l / (this.sBox.offsetWidth-this.span.offsetWidth)
-//     var y = t / (this.sBox.offsetHeight-this.span.offsetHeight)
-//     console.log(x,y)
-
-//     // 根据比例移动大图
-//     this.bImg.style.left = -x * (this.bImg.offsetWidth-this.bBox.offsetWidth) + "px";
-//     this.bImg.style.top = -y * (this.bImg.offsetHeight-this.bBox.offsetHeight) + "px";
-// }
-// Magnifier.prototype.init = function(){
-//     var that = this;
-//     // 进入
-//     this.sBox.onmouseover = function(){
-//         // 显示元素
-//         that.show()
-//         // 移动             this == that.sBox
-//         this.onmousemove = function(eve){
-//             var e = eve || window.event;
-//             // e.pageX - this.offsetLeft === e.offsetX
-//             // e.pageY - this.offsetTop === e.offsetY
-//             that.move({
-//                 x:e.pageX - this.offsetLeft,
-//                 y:e.pageY - this.offsetTop
-//             })
-//         }
-//     }
-//     // 离开
-//     this.sBox.onmouseout = function(){
-//         //     隐藏元素
-//         that.hide()
-//     }
-// }
-
-// new Magnifier;

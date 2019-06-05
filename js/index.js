@@ -277,12 +277,11 @@
                     this.successUser = this.data[i].tel;
                     return;
                 }
-                // this.data[i].onoff = 0;
-
+                this.data[i].onoff = 0;
+                this.p1.style.display = "block";
+                this.p2.style.display = "none";
+                this.span.innerHTML = "";
             }
-            this.p1.style.display = "block";
-            this.p2.style.display = "none";
-            this.span.innerHTML = "";
         }
         addEvent(){
             var that = this;

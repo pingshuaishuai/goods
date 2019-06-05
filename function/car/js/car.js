@@ -1,6 +1,7 @@
 class Car{
     constructor(){
         this.tbody = document.querySelector("#table tbody");
+        // this.payfor = document.querySelector(".payfor");
         this.url = "http://localhost/ztt/goods/public/data/goods.json";
 
         this.init();
@@ -28,7 +29,10 @@ class Car{
     // 渲染页面
     display(){
         var str = "";
+        var str2 = "";
+        this.ssum = [];
         this.money = 0;
+
         for(var i = 0;i < this.res.length;i++){
             for(var j = 0;j < this.res[i].shop.length;j++){
                 for(var z = 0;z < this.goods.length;z++){
@@ -51,17 +55,16 @@ class Car{
                                     <td>￥${this.sum}</td>
                                     <td><span class="del">删除</span></td>
                                 </tr>`
-                                
-                                this.money += this.sum;
-                                // console.log(this.money)
-                                
-                    }
-                    console.log(this.money)
-                            
+                        // this.money += this.sum;
+                        // this.ssum.push(this.money)
+                        // str2 +=`<p class="money">总计：<b>￥${this.ssum[length+1]}</b><span class="pay">结算</span></p>`
+                        //         // console.log(this.ssum[length+1]) 
+                    }         
                 }
             }
         }
         this.tbody.innerHTML = str;
+        // this.payfor.innerHTML = str;
     }
     // 添加事件委托
     addEvent(){
