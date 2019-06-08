@@ -35,22 +35,22 @@
                 }
                 this.sel.innerHTML = str;
             }
-            var aimg = document.querySelectorAll(".se-bottom img");
-            var clientH = document.documentElement.clientHeight;
-            function lazyLog(arr){
-                var scrollT = document.documentElement.scrollTop;
-                for(var i=0;i<arr.length;i++){
-                    if(arr[i].src != "") continue;
-
-                    if(arr[i].offsetTop < clientH + scrollT){
-                        arr[i].src = arr[i].getAttribute("data-src");
-                        console.log(`第${i}张可以加载了`)
-                    }
-                }
-            }
-            lazyLog(aimg)
+            let aimg = document.querySelectorAll(".se-bottom img");
+            let clientH = document.documentElement.clientHeight;
+            this.lazy(aimg,clientH);
             onscroll = function(){
-                lazyLog(aimg)
+                lazy(aimg)
+            }
+        }
+        // 图片的懒加载
+        lazy(arr,clientH){
+            var scrollT = document.documentElement.scrollTop;
+            for(var i=0;i<arr.length;i++){
+                if(arr[i].src != "") continue;
+                if(arr[i].offsetTop < clientH + scrollT){
+                    arr[i].src = arr[i].getAttribute("data-src");
+                    console.log(`第${i}张可以加载了`)
+                }
             }
         }
         // 渲染打折页面商品列表
@@ -69,25 +69,14 @@
                 }
                 this.spi.innerHTML = str2;
             }
-            var aimg = document.querySelectorAll(".se-bottom img");
-            var clientH = document.documentElement.clientHeight;
-            function lazyLog(arr){
-                var scrollT = document.documentElement.scrollTop;
-                for(var i=0;i<arr.length;i++){
-                    if(arr[i].src != "") continue;
-
-                    if(arr[i].offsetTop < clientH + scrollT){
-                        arr[i].src = arr[i].getAttribute("data-src");
-                        console.log(`第${i}张可以加载了`)
-                    }
-                }
-            }
-            lazyLog(aimg)
+            let aimg = document.querySelectorAll(".se-bottom img");
+            let clientH = document.documentElement.clientHeight;
+            this.lazy(aimg,clientH)
             onscroll = function(){
-                lazyLog(aimg)
+                lazy(aimg)
             }
         }
-        // 渲染女装
+        // 渲染女装商品
         disWom(){
             let str2 = "";
             for(var i = 0;i < this.res.length;i++){
@@ -102,25 +91,14 @@
                 }
                 this.wom.innerHTML = str2;
             }
-            var aimg = document.querySelectorAll(".se-bottom img");
-            var clientH = document.documentElement.clientHeight;
-            function lazyLog(arr){
-                var scrollT = document.documentElement.scrollTop;
-                for(var i=0;i<arr.length;i++){
-                    if(arr[i].src != "") continue;
-
-                    if(arr[i].offsetTop < clientH + scrollT){
-                        arr[i].src = arr[i].getAttribute("data-src");
-                        console.log(`第${i}张可以加载了`)
-                    }
-                }
-            }
-            lazyLog(aimg)
+            let aimg = document.querySelectorAll(".se-bottom img");
+            let clientH = document.documentElement.clientHeight;
+            this.lazy(aimg,clientH)
             onscroll = function(){
-                lazyLog(aimg)
+                lazy(aimg)
             }
         }
-        // 渲染男装
+        // 渲染男装商品
         disMen(){
             let str2 = "";
             for(var i = 0;i < this.res.length;i++){
@@ -135,33 +113,23 @@
                 }
                 this.men.innerHTML = str2;
             }
-            var aimg = document.querySelectorAll(".se-bottom img");
-            var clientH = document.documentElement.clientHeight;
-            function lazyLog(arr){
-                var scrollT = document.documentElement.scrollTop;
-                for(var i=0;i<arr.length;i++){
-                    if(arr[i].src != "") continue;
-
-                    if(arr[i].offsetTop < clientH + scrollT){
-                        arr[i].src = arr[i].getAttribute("data-src");
-                        console.log(`第${i}张可以加载了`)
-                    }
-                }
-            }
-            lazyLog(aimg)
+            let aimg = document.querySelectorAll(".se-bottom img");
+            let clientH = document.documentElement.clientHeight;
+            this.lazy(aimg,clientH)
             onscroll = function(){
-                lazyLog(aimg)
+                lazy(aimg)
             }
         }
     }
     new Display;
-
+    // 轮播图
     $(".banner").banner({
         items:$(".banner .imgbox").children(),
         list:true,
         left:$(".banner #left"),
         right:$(".banner #right")
     })
+    // 菜单
     class Menu{
         constructor(){
             this.cont = document.querySelector("nav .cont");
@@ -190,7 +158,9 @@
             }
             this.cont.onmouseout = function(){
                 that.addEvent2();
+                // that.menu.style.display = "none";
             }
+            
         }
         // 渲染二级菜单
         display(){
@@ -210,20 +180,15 @@
                 if(target.nodeName == "LI"){
                     that.index = target.getAttribute("index");
                     that.menu2.style.display = "block";
-
-
                     target.onclick = function(){
                         window.location.href = "http://localhost/ztt/goods/function/goodlist/goodlist.html"
                     }
                     that.displayTwo();
                 }
-
                 this.menu2.onmouseover = function(){
                     that.menu.style.display = "block";
                     that.menu2.style.display = "block";  
                 }
-
-
             })
 
             this.menu.onmouseleave = function(){
