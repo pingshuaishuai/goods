@@ -41,10 +41,11 @@ readme：
 2.首页路径：http://localhost/ztt/goods/index.html
 3.技术栈：（1）原生js
           （2）jq插件
-          （3）Bootstrap插件
-          （4）sass     
-          （5）gulp工具
-	  （6）使用github，做版本管理
+	  （3）使用es6语法
+          （4）Bootstrap插件
+          （5）使用sass转css    
+          （6）gulp工具
+	  （7）使用github，做版本管理
 4.项目使用方式：
 	（1）建立站点，名为ztt，打开首页网址		http://localhost/ztt/goods/index.html
 	（2）首页有轮播图，三级菜单，缓慢楼梯效果，商品由数据渲染
